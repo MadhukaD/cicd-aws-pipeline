@@ -1,7 +1,9 @@
 import os
+
 from flask import Flask, jsonify
 
 app = Flask(__name__)
+
 
 @app.get("/")
 def index():
@@ -9,6 +11,7 @@ def index():
         message="Hello from the CI/CD pipeline",
         version=os.getenv("APP_VERSION", "dev"),
     )
+
 
 @app.get("/health")
 def health():
