@@ -82,6 +82,8 @@ docker run --rm -p 8000:8000 -e APP_VERSION=local cicd-demo:local
 - This project uses a public task IP restricted by security group, to keep
   costs low. A production setup would use an ALB, private subnets, and TLS.
 
+How this was built: see [BUILD-GUIDE.md](/docs/BUILD-GUIDE.md)
+
 ## What I learned
 
 - Debugging OIDC trust failures: the token's `sub` claim format must match
